@@ -5,15 +5,13 @@
 # This is a program that finds the area of a triangle
 
 
-def calculate_area(base1, base2, height):
+def area(base1, base2, height):
     # Calculate area
 
     # Process
     area = (base1 + base2) / 2 * height
-
-    # Output
-    print("The area of the trapezoid is {0} cm²".format(area))
-
+    
+    return area
 
 def main():
     # This is the main function
@@ -30,10 +28,12 @@ def main():
         base1_int = int(user_base1)
         base2_int = int(user_base2)
         # Call Functions
-        calculate_area(base1_int, base2_int, height_int)
+        calculate_area = area(base1_int, base2_int, height_int)
     except Exception:
         print("That's not an integer pal.")
     finally:
+        # Output
+        print("The area of the trapezoid is {0} cm²".format(calculate_area))
         print("\nDone.")
 
 
