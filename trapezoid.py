@@ -16,25 +16,30 @@ def area(base1, base2, height):
 def main():
     # This is the main function
 
-    # Input
-    user_base1 = input("Enter The 1st Base of the trapezoid (cm): ")
-    user_base2 = input("Enter The 2nd Base of the trapezoid (cm): ")
-    user_height = input("Enter Height of the trapezoid (cm): ")
-    print("")
 
     # Process
-    try:
-        height_int = int(user_height)
-        base1_int = int(user_base1)
-        base2_int = int(user_base2)
-        # Call Functions
-        calculate_area = area(base1_int, base2_int, height_int)
-    except Exception:
-        print("That's not an integer pal.")
-    finally:
-        # Output
-        print("The area of the trapezoid is {0} cm²".format(calculate_area))
-        print("\nDone.")
+    while True:
+        try:
+            # Input
+            user_base1 = input("Enter The 1st Base of the trapezoid (cm): ")
+            user_base2 = input("Enter The 2nd Base of the trapezoid (cm): ")
+            user_height = input("Enter Height of the trapezoid (cm): ")
+            print("") 
+            height_int = int(user_height)
+            base1_int = int(user_base1)
+            base2_int = int(user_base2)
+            # Call Functions
+            calculate_area = area(base1_int, base2_int, height_int)
+            # Output
+            print("The area of the trapezoid is {0} cm²".format(calculate_area))
+            break
+        except Exception:
+            print("That's not an integer pal.")
+        finally:
+            print("")
+
+    print("\nDone.")
+
 
 
 if __name__ == "__main__":
