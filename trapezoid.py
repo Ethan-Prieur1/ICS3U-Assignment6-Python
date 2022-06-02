@@ -10,12 +10,12 @@ def area(base1, base2, height):
 
     # Process
     area = (base1 + base2) / 2 * height
-    
+
     return area
+
 
 def main():
     # This is the main function
-
 
     # Process
     while True:
@@ -24,7 +24,7 @@ def main():
             user_base1 = input("Enter The 1st Base of the trapezoid (cm): ")
             user_base2 = input("Enter The 2nd Base of the trapezoid (cm): ")
             user_height = input("Enter Height of the trapezoid (cm): ")
-            print("") 
+            print("")
             height_int = int(user_height)
             base1_int = int(user_base1)
             base2_int = int(user_base2)
@@ -39,7 +39,6 @@ def main():
             print("")
 
     print("\nDone.")
-
 
 
 if __name__ == "__main__":
